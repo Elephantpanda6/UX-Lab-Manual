@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor="pink" align="center"><br><br>
+    <form name="f">
+        LOGIN ID: <input name="id"><br><br>
+        PASSWORD: <input type="password" name="pwd"><br><br>
+        AMOUNT: <input name="amount"><br><br>
+        CREDIT CARD NUMBER: <input type="password" name="num"><br><br>
+        <input type="button" value="ok" onclick="validate()">
+        <input type="reset" value="clear">
+    </form>
+    <script>
+        function validate() {
+            if (!f.id.value || !f.pwd.value || !/^\d+$/.test(f.amount.value) || !f.num.value)
+                return alert("INVALID INPUT");
+            alert("VALID INPUT");
+            location.href = "order.html";
+        }
+    </script>
+</body>
+</html>

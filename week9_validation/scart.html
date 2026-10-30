@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor="pink" align="center"><br><br>
+    <form name="f" action="payment.html" onsubmit="return validate()">
+        LOGIN ID: <input name="id"><br><br>
+        TITLE: <input name="title"><br><br>
+        NO. OF BOOKS: <input name="no"><br><br>
+        COST OF BOOK: <input name="cost"><br><br>
+        <input type="submit" value="ok">
+        <input type="reset" value="clear">
+    </form>
+    <script>
+        function validate() {
+            let t = f.title.value.toLowerCase(), c = f.cost.value;
+            if (!f.id.value || !t || !f.no.value || !c || !((t == "c" && c == 444) || (t == "jsp" && c == 555)))
+                return alert("INVALID INPUT"), false;
+            return alert("VALID INPUT"), true;
+        }
+    </script>
+</body>
+</html>

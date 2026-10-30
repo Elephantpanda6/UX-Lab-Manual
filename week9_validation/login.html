@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor="pink" align="center"><br><br>
+    <form name="f">
+        LOGIN ID: <input name="id"><br><br>
+        PASSWORD: <input type="password" name="pwd"><br><br>
+        <input type="button" value="ok" onclick="validate()">
+        <input type="reset" value="clear">
+    </form>
+    <script>
+        function validate() {
+            if (!f.id.value.trim() || !f.pwd.value)
+                return alert("LoginId and Password must be filled"), alert("INVALID INPUT");
+            alert("VALID INPUT");
+            location.href = "catalog.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor="pink" align="center"><br><br>
+    <form name="f">
+        NAME: <input name="name"><br><br>
+        ADDRESS: <input name="addr"><br><br>
+        CONTACT NUMBER: <input name="phno"><br><br>
+        LOGIN ID: <input name="id"><br><br>
+        PASSWORD: <input type="password" name="pwd"><br><br>
+        <input type="button" value="ok" onclick="validate()">
+        <input type="reset" value="clear">
+    </form>
+    <script>
+        function validate() {
+            let rx = /^[A-Z][a-zA-Z]+$/;
+            if (!f.name.value || !f.addr.value || !f.phno.value || !f.id.value || !f.pwd.value)
+                return alert("Enter all the details"), alert("INVALID INPUT");
+            if (!/^\d{10}$/.test(f.phno.value))
+                return alert("INVALID INPUT");
+            if (!rx.test(f.id.value))
+                return alert("Invalid UserID"), alert("INVALID INPUT");
+            if (!rx.test(f.pwd.value))
+                return alert("Invalid password"), alert("INVALID INPUT");
+            alert("VALID INPUT");
+            location.href = "login.html";
+        }
+    </script>
+</body>
+</html>

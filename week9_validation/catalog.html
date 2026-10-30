@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor="pink" align="center"><br><br>
+    <form name="f">
+        BOOK TITLE: <input name="title"><br><br>
+        BOOK NAME: <input name="t1" readonly><br><br>
+        COST: <input name="t2" readonly><br><br>
+        <input type="button" value="ok" onclick="validate()">
+        <input type="reset" value="clear">
+    </form>
+    <script>
+        function validate() {
+            let s = f.title.value.toUpperCase();
+            if (s == "C") { f.t1.value = "C"; f.t2.value = 444; alert("VALID INPUT"); }
+            else if (s == "JSP") { f.t1.value = "JSP"; f.t2.value = 555; alert("VALID INPUT"); }
+            else alert("INVALID INPUT");
+        }
+    </script>
+</body>
+</html>
