@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Simple Calculator</h2>
+    <input type="number" id="a" placeholder="First number">
+    <input type="number" id="b" placeholder="Second number"><br><br>
+    <button onclick="calc('+')">Add</button>
+    <button onclick="calc('-')">Subtract</button>
+    <button onclick="calc('*')">Multiply</button>
+    <button onclick="calc('/')">Divide</button>
+    <p id="res"></p>
+    <script>
+        function calc(op) {
+            let x = parseFloat(a.value), y = parseFloat(b.value);
+            if (isNaN(x) || isNaN(y)) return res.innerText = "Enter valid numbers";
+            let r = op == '+' ? x + y : op == '-' ? x - y : op == '*' ? x * y : y ? x / y : "Cannot divide by zero";
+            res.innerText = "Result: " + r;
+        }
+    </script>
+</body>
+</html>

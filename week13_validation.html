@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Form Validation</h2>
+    <form onsubmit="return validate()">
+        Name: <input id="n"><br><br>
+        Email: <input id="e"><br><br>
+        Password: <input type="password" id="p"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p id="err" style="color:red"></p>
+    <script>
+        function validate() {
+            let msg = !n.value ? "Name is required"
+                : (!e.value.includes("@") || !e.value.includes(".")) ? "Enter valid email"
+                : p.value.length < 6 ? "Password must be at least 6 characters" : "";
+            if (msg) return err.innerText = msg, false;
+            return alert("Form submitted successfully!"), true;
+        }
+    </script>
+</body>
+</html>

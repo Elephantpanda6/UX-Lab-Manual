@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Background Colour Changer</h2>
+    <button onclick="bg('red')">Red</button>
+    <button onclick="bg('blue')">Blue</button>
+    <button onclick="bg('green')">Green</button>
+    <button onclick="bg('yellow')">Yellow</button>
+    <button onclick="rand()">Random</button>
+    <script>
+        const c = ["red", "blue", "green", "yellow", "pink", "orange"];
+        function bg(x) { document.body.style.backgroundColor = x; }
+        function rand() { bg(c[Math.floor(Math.random() * c.length)]); }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Login to Book Store</h2>
+    <form onsubmit="return login()">
+        Username: <input id="u"><br><br>
+        Password: <input type="password" id="p"><br><br>
+        <input type="submit" value="Login">
+    </form>
+    <p id="err" style="color:red"></p>
+    <script>
+        function login() {
+            if (!u.value || !p.value)
+                return err.innerText = "All fields are required", false;
+            if (u.value == "admin" && p.value == "1234")
+                return alert("Login Successful!"), true;
+            return err.innerText = "Invalid Username or Password", false;
+        }
+    </script>
+</body>
+</html>

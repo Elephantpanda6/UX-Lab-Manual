@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Even or Odd Number Checker</h2>
+    <input type="number" id="n" placeholder="Enter a number">
+    <button onclick="check()">Check</button>
+    <p id="res"></p>
+    <script>
+        function check() {
+            let v = n.value;
+            res.innerText = v === "" ? "Please enter a number" : v + (v % 2 ? " is Odd" : " is Even");
+        }
+    </script>
+</body>
+</html>
